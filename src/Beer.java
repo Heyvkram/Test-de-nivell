@@ -13,5 +13,8 @@ public abstract class Beer {
         this.dateOfFabrication = dateOfFabrication;
     }
 
+    public double getAlcoholPercentage() {
+        return alcoholPercentage;
+    }
 
 }

@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class BeerHandler {
     private List<Beer> beerList = new ArrayList<>();
@@ -12,8 +13,9 @@ public class BeerHandler {
         beerList.forEach(System.out::println);
     }
 
-    public void sortBeerByAlcoholPercentage(){
-
+    public List<Beer> filterBeersByAlcoholPercentage(double maxAlcoholPercentage) {
+        return beerList.stream()
+                .filter(beer -> beer.getAlcoholPercentage() > maxAlcoholPercentage)
+                .collect(Collectors.toList());
     }
-
 }

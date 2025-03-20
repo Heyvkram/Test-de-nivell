@@ -8,14 +8,6 @@ public class Stout extends Beer implements CraftProcess{
         this.maltUsed = maltUsed;
     }
 
-    public String getMaltUsed() {
-        return maltUsed;
-    }
-
-    public void setMaltUsed(String maltUsed) {
-        this.maltUsed = maltUsed;
-    }
-
     @Override
     public String craftProcess() {
         return " The Stout uses " + maltUsed + " malta in the crafting process";

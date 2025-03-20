@@ -1,3 +1,5 @@
+import java.util.List;
+
 public class Main {
     public static void main(String[] args) {
         BeerHandler beerList = new BeerHandler();
@@ -12,6 +14,8 @@ public class Main {
 
         beerList.showBeers();
 
+        List<Beer> filteredBeers = beerList.filterBeersByAlcoholPercentage(5.0);
+        System.out.println(filteredBeers);
 
     }
 }
